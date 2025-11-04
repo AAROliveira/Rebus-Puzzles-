@@ -1,0 +1,5 @@
+{
+  "name": "Rebus Puzzle Guessing Game",
+  "description": "A fun rebus puzzle guessing game for ESL students to test their idiom and phrase knowledge. Guess the answer before the 20-second timer runs out!",
+  "requestFramePermissions": []
+}
