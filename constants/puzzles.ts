@@ -194,7 +194,7 @@ export const PUZZLES: Puzzle[] = [
   { id: 191, image: 'images/Rebus16.11.png', answer: 'Hand in hand' },
   { id: 192, image: 'images/Rebus16.12.png', answer: 'Beetroot' },
   { id: 193, image: 'images/Rebus17.1.png', answer: 'India' },
-  { id: 194, image:S 'images/Rebus17.2.png', answer: 'Lunatics' },
+  { id: 194, image: 'images/Rebus17.2.png', answer: 'Lunatics' },
   { id: 195, image: 'images/Rebus17.3.png', answer: 'Mayonnaise' },
   { id: 196, image: 'images/Rebus17.4.png', answer: 'Elbows' },
   { id: 197, image: 'images/Rebus17.5.png', answer: 'Administrator' },
