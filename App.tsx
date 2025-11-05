@@ -102,15 +102,22 @@ function App() {
     }
   };
 
-  async function fileToGenerativePart(dataUrl: string) {
-    const mimeType = dataUrl.substring(dataUrl.indexOf(':') + 1, dataUrl.indexOf(';'));
-    const base64Data = dataUrl.split(',')[1];
-    return {
-      inlineData: {
-        data: base64Data,
-        mimeType
-      },
-    };
+  async function fileToGenerativePart(path: string) {
+    const response = await fetch(path);
+    const blob = await response.blob();
+    return new Promise((resolve) => {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const base64Data = (reader.result as string).split(',')[1];
+        resolve({
+          inlineData: {
+            data: base64Data,
+            mimeType: blob.type,
+          },
+        });
+      };
+      reader.readAsDataURL(blob);
+    });
   }
 
   const isCorrect = feedback.startsWith('Correct');
